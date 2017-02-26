@@ -1,4 +1,8 @@
-var col;
+var col = {
+    r: 255,
+    g: 0,
+    b: 0
+};
 var r= 0;
 var b = 255;
 
@@ -10,12 +14,9 @@ var circle = {
 
 function setup() {
     createCanvas(459, 360);
-
 }
 
 function draw() {
-    r = map(mouseX, 0, 459, 0, 255);
-    b = map(mouseX, 0, 459, 255, 0);
     background(r,0,b);
     fill(250, 200 ,200);
     ellipse(mouseX,circle.y,circle.diameter, circle.diameter);
