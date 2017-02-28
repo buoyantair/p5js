@@ -1,24 +1,31 @@
+
+
+var pageHeight = window.innerHeight;
+var pageWidth = window.innerHeight;
+var spot = {
+    x: 100,
+    y: 50,
+    scale: 100
+}
+
 var col = {
     r: 255,
     g: 0,
     b: 0
 };
-var r= 0;
-var b = 255;
-
-var circle = {
-    diameter : 50,
-    x : 10,
-    y : 300
+function setup(){
+    createCanvas(pageWidth, pageHeight);
+    background(0);
 };
 
-function setup() {
-    createCanvas(459, 360);
-}
-
 function draw() {
-    background(r,0,b);
-    fill(250, 200 ,200);
-    ellipse(mouseX,circle.y,circle.diameter, circle.diameter);
-}
-
+    col.r = random(100,255);
+    col.g = random(0,255);
+    col.b = random(60,82);
+    noStroke();
+    spot.x = random(0,width);
+    spot.y = random(0,height);
+    spot.scale = random(20,100);
+    fill(col.r, col.g ,col.b, 100);
+    ellipse(spot.x, spot.y, spot.scale, spot.scale);
+};
