@@ -20,14 +20,15 @@ c = {
 function draw() {
     fill(c.r,c.g,c.b);
     ellipse(mouseX,mouseY,50,50);
-    if (c.r == 255 || c.g == 255 || c.b == 255){
-        c.r -= 1;
-        c.g -= 1;
-        c.b -= 1;
-    } else if (c.r < 255 || c.g < 255 || c.b < 255){
+    var r = random(0,100);
+    if (r > 50){
         c.r += 1;
         c.g += 1;
         c.b += 1;
+    } else{
+        c.r -= 1;
+        c.g -= 1;
+        c.b -= 1;
     }
 }
 
