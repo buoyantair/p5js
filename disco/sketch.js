@@ -16,7 +16,6 @@ function draw() {
         for (var y =0; y <= width; y+= s){
             fill(random(255),random(255), random(255));
             rect(x,y, s, s);
-
         }
     }
 }
